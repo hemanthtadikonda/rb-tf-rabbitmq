@@ -38,7 +38,6 @@ resource "aws_instance" "main" {
 }
 
 resource "aws_route53_record" "www" {
-  count = var.subnet_id
   zone_id = var.zone_id
   name    = local.name_prefix
   type    = "A"
